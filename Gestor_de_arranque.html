@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Arranque</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+4:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- Header reutilizable -->
+    <header>
+        <div class="header-container">
+          <div class="header-top">
+            <a href="index.html" class="logo">KaliLinux</a>
+          </div>
+          <div class="menu-container">
+            <nav class="menu">
+              <a class="menu-item" href="Antecedentes.html">Antecedentes</a>
+              <a class="menu-item" href="Características.html">Características</a>
+              <a class="menu-item activo" href="Gestor_de_arranque.html">Gestor de arranque</a>
+              <a class="menu-item" href="Sistemas_de_archivos.html">Sistemas de archivos</a>
+              <a class="menu-item" href="Aplicaciones_en_la_industria.html">Aplicaciones en la industria</a>
+              <a class="menu-item" href="Versiones.html">Versiones</a>
+              <a class="menu-item" href="Interfaces.html">Interfaces</a>
+              <a class="menu-item" href="Aplicacion_via_Web.html">Aplicación vía Web</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+    <!-- Banner del gestor de arranque -->
+    <section class="gestor-banner">
+        <div class="gestor-banner-content">
+            <h1>Gestor de Arranque</h1>
+            <p>El componente crítico que permite iniciar Kali Linux y facilita la configuración de múltiples opciones de arranque</p>
+        </div>
+    </section>
+
+    <!-- Contenido principal con dos columnas -->
+    <div class="gestor-container">
+
+        <!-- Columna izquierda: Terminal animada -->
+        <div class="gestor-terminal">
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">Terminal - GRUB</span>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-line">root@kali:~# <span class="terminal-cursor">cat /boot/grub/grub.cfg</span></div>
+                <div class="terminal-output">
+                    <span class="comment"># Configuración predeterminada de GRUB para Kali Linux</span>
+                    <span>GRUB_DEFAULT=0</span>
+                    <span>GRUB_TIMEOUT=5</span>
+                    <span>GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Kali`</span>
+                    <span>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</span>
+                    <span>GRUB_CMDLINE_LINUX=""</span>
+                    <span class="comment"># Opciones de seguridad</span>
+                    <span>GRUB_ENABLE_CRYPTODISK=y</span>
+                    <span class="comment"># Tema de Kali</span>
+                    <span>GRUB_THEME="/boot/grub/themes/kali/theme.txt"</span>
+                </div>
+                <div class="terminal-line blinking">root@kali:~# <span class="terminal-cursor">_</span></div>
+            </div>
+        </div>
+
+        <!-- Columna derecha: Información -->
+        <div class="gestor-info">
+            <h2>GRUB2 en Kali Linux</h2>
+            
+            <h3>Características principales</h3>
+            <ul class="gestor-features">
+                <li>
+                    <span class="feature-icon">🔒</span>
+                    <span class="feature-text"><strong>Arranque seguro:</strong> Soporte para sistemas UEFI con Secure Boot habilitado</span>
+                </li>
+                <li>
+                    <span class="feature-icon">🔄</span>
+                    <span class="feature-text"><strong>Multiboot:</strong> Capacidad para gestionar diferentes sistemas operativos</span>
+                </li>
+                <li>
+                    <span class="feature-icon">⚙️</span>
+                    <span class="feature-text"><strong>Opciones avanzadas:</strong> Menús intuitivos con variedad de configuraciones</span>
+                </li>
+                <li>
+                    <span class="feature-icon">🔧</span>
+                    <span class="feature-text"><strong>Consola de recuperación:</strong> Herramientas para recuperar sistemas dañados</span>
+                </li>
+            </ul>
+
+            <p class="gestor-description">
+                GRUB2 (GRand Unified Bootloader versión 2) es el gestor de arranque estándar en Kali Linux, responsable 
+                de cargar y transferir el control al kernel del sistema operativo. Es especialmente valioso en entornos 
+                de pruebas de penetración donde la flexibilidad de arranque puede ser crítica para diferentes escenarios de seguridad.
+            </p>
+            
+            <div class="gestor-highlight">
+                <p>El gestor de arranque es uno de los componentes más importantes de la seguridad del sistema, ya que representa
+                el primer punto de control que puede ser protegido o comprometido.</p>
+            </div>
+            
+            <h3>Modos de operación</h3>
+            <div class="gestor-modes">
+                <div class="mode-item">
+                    <div class="mode-title">Modo normal</div>
+                    <div class="mode-desc">Inicia Kali Linux con todas las funcionalidades y servicios estándar.</div>
+                </div>
+                <div class="mode-item">
+                    <div class="mode-title">Modo forense</div>
+                    <div class="mode-desc">Evita montar cualquier disco local, ideal para investigaciones forenses.</div>
+                </div>
+                <div class="mode-item">
+                    <div class="mode-title">Modo stealth</div>
+                    <div class="mode-desc">Minimiza la huella digital en la red durante pruebas de penetración.</div>
+                </div>
+                <div class="mode-item">
+                    <div class="mode-title">Modo persistente</div>
+                    <div class="mode-desc">Permite guardar cambios cuando se ejecuta desde un medio extraíble.</div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <a href="Sistemas_de_archivos.html" class="btn-next">
+                    <span>Continuar a Sistemas de Archivos</span>
+                    <svg viewBox="0 0 24 24" class="btn-icon"><path d="M12,4L10.59,5.41L16.17,11H4V13H16.17L10.59,18.59L12,20L20,12L12,4Z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

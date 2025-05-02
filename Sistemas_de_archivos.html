@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistemas de Archivos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+4:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+          <div class="header-top">
+            <a href="index.html" class="logo">KaliLinux</a>
+          </div>
+          <div class="menu-container">
+            <nav class="menu">
+              <a class="menu-item" href="Antecedentes.html">Antecedentes</a>
+              <a class="menu-item" href="Características.html">Características</a>
+              <a class="menu-item" href="Gestor_de_arranque.html">Gestor de arranque</a>
+              <a class="menu-item activo" href="Sistemas_de_archivos.html">Sistemas de archivos</a>
+              <a class="menu-item" href="Aplicaciones_en_la_industria.html">Aplicaciones en la industria</a>
+              <a class="menu-item" href="Versiones.html">Versiones</a>
+              <a class="menu-item" href="Interfaces.html">Interfaces</a>
+              <a class="menu-item" href="Aplicacion_via_Web.html">Aplicación vía Web</a>
+            </nav>
+          </div>
+        </div>
+    </header>
+
+    <!-- Banner superior -->
+    <section class="filesystem-banner">
+        <h1>Sistemas de Archivos</h1>
+        <p>Estructura de almacenamiento y organización de datos en Kali Linux</p>
+    </section>
+
+    <!-- Contenido principal -->
+    <div class="filesystem-container">
+        <!-- Tarjetas de sistemas de archivos -->
+        <div class="fs-cards">
+            <div class="fs-card">
+                <div class="fs-card-header">ext4</div>
+                <div class="fs-card-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                    <ul class="fs-features">
+                        <li>Soporte para volúmenes hasta 1 EiB</li>
+                        <li>Journaling completo para integridad del sistema</li>
+                        <li>Reducción de fragmentación del disco</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="fs-card">
+                <div class="fs-card-header">NTFS</div>
+                <div class="fs-card-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+                    <ul class="fs-features">
+                        <li>Compatibilidad con Windows para operaciones forenses</li>
+                        <li>Soporte para permisos y cifrado</li>
+                        <li>Tamaños de archivo extensos</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="fs-card">
+                <div class="fs-card-header">btrfs</div>
+                <div class="fs-card-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit.</p>
+                    <ul class="fs-features">
+                        <li>Sistema de archivos de próxima generación</li>
+                        <li>Soporte para instantáneas y clonación</li>
+                        <li>Alta resistencia a la corrupción de datos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diagrama de estructura -->
+        <div class="fs-structure">
+            <h2>Estructura de directorios</h2>
+            <div class="fs-diagram">
+                <div class="fs-root">/root</div>
+                <div class="fs-branches">
+                    <div class="fs-branch">
+                        <div class="fs-folder">/bin</div>
+                        <div class="fs-description">Comandos esenciales</div>
+                    </div>
+                    <div class="fs-branch">
+                        <div class="fs-folder">/etc</div>
+                        <div class="fs-description">Configuración del sistema</div>
+                    </div>
+                    <div class="fs-branch">
+                        <div class="fs-folder">/usr</div>
+                        <div class="fs-description">Aplicaciones y herramientas</div>
+                    </div>
+                    <div class="fs-branch">
+                        <div class="fs-folder">/var</div>
+                        <div class="fs-description">Datos variables</div>
+                    </div>
+                    <div class="fs-branch">
+                        <div class="fs-folder">/opt</div>
+                        <div class="fs-description">Software adicional</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tabla de características -->
+        <div class="fs-comparison">
+            <h2>Comparativa de rendimiento</h2>
+            <div class="fs-table-container">
+                <table class="fs-table">
+                    <thead>
+                        <tr>
+                            <th>Sistema de archivos</th>
+                            <th>Velocidad de lectura</th>
+                            <th>Velocidad de escritura</th>
+                            <th>Recuperación</th>
+                            <th>Seguridad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ext4</td>
+                            <td><div class="rating r-4"></div></td>
+                            <td><div class="rating r-4"></div></td>
+                            <td><div class="rating r-3"></div></td>
+                            <td><div class="rating r-5"></div></td>
+                        </tr>
+                        <tr>
+                            <td>btrfs</td>
+                            <td><div class="rating r-3"></div></td>
+                            <td><div class="rating r-3"></div></td>
+                            <td><div class="rating r-5"></div></td>
+                            <td><div class="rating r-4"></div></td>
+                        </tr>
+                        <tr>
+                            <td>XFS</td>
+                            <td><div class="rating r-5"></div></td>
+                            <td><div class="rating r-4"></div></td>
+                            <td><div class="rating r-3"></div></td>
+                            <td><div class="rating r-3"></div></td>
+                        </tr>
+                        <tr>
+                            <td>NTFS</td>
+                            <td><div class="rating r-3"></div></td>
+                            <td><div class="rating r-3"></div></td>
+                            <td><div class="rating r-4"></div></td>
+                            <td><div class="rating r-3"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Bloque de características especiales -->
+        <div class="fs-special-features">
+            <div class="fs-feature-block">
+                <div class="fs-icon">🔐</div>
+                <h3>Cifrado de disco</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            </div>
+            <div class="fs-feature-block">
+                <div class="fs-icon">🔄</div>
+                <h3>Journaling</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            </div>
+            <div class="fs-feature-block">
+                <div class="fs-icon">⚡</div>
+                <h3>Optimización</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            </div>
+        </div>
+        
+        <!-- Conclusión -->
+        <div class="fs-conclusion">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <button class="btn"><a href="Aplicaciones_en_la_industria.html" class="continuar">Siguiente</a></button>
+    </div>
+
+</body>
+
+</html>
