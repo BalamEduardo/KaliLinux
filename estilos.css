@@ -135,13 +135,6 @@ body::before {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* ===========================================
-   CORRECCIÓN DE ANIMACIONES FALTANTES
-   =========================================== */
-
-/* ===========================================
-   CORRECCIÓN DE ANIMACIÓN IMAGEREVEAL
-   =========================================== */
 @keyframes imageReveal {
   from { 
     opacity: 0; 
@@ -833,6 +826,7 @@ div[style="text-align: center;"] {
 
 .contenido-antecedentes p:nth-child(2) { animation-delay: 0.2s; }
 .contenido-antecedentes p:nth-child(3) { animation-delay: 0.4s; }
+.contenido-antecedentes p:nth-child(4) { animation-delay: 0.6s; }
 
 .contenido-antecedentes p strong {
   font-weight: 700;
@@ -869,8 +863,8 @@ div[style="text-align: center;"] {
 }
 
 .iconos img {
-  width: 85px;
-  height: 85px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   padding: 18px;
   border-radius: 50%;
@@ -1795,7 +1789,6 @@ div[style="text-align: center;"] {
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
   /* agregar transicion al cargar*/
   animation: fadeIn 0.8s ease-in forwards;
   
@@ -2283,52 +2276,264 @@ div[style="text-align: center;"] {
 }
 
 .fs-card {
-  flex: 1;
-  min-width: 300px;
-  max-width: 380px;
+  position: relative;
+  border-radius: 16px;
+  overflow: visible;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   background: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: all 0.3s ease;
-  animation: fadeIn 0.8s ease-out forwards;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px; 
+  border: 1px solid rgba(30, 69, 37, 0.05);
 }
 
 .fs-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
+/* Cabecera flotante */
 .fs-card-header {
-  background: #1E4525;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
   color: white;
-  padding: 18px 25px;
-  font-family: 'DM Serif Display', serif;
-  font-size: 1.8rem;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  z-index: 10;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(30, 69, 37, 0.25);
+  min-width: 200px;
   text-align: center;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: visible;
 }
 
+.fs-card:hover .fs-card-header {
+  background: var(--color-primary-dark);
+  box-shadow: 0 8px 20px rgba(30, 69, 37, 0.35);
+}
+
+/* Imagen con efecto de zoom y sombra interna */
+.fs-card-image {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+}
+
+.fs-card-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+                rgba(0, 0, 0, 0.4) 0%,
+                rgba(0, 0, 0, 0) 30%,
+                rgba(0, 0, 0, 0) 60%,
+                rgba(0, 0, 0, 0.3) 100%);
+  z-index: 2;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.fs-card:hover .fs-card-image::before {
+  opacity: 0.3;
+}
+
+.ext4-img, .fat-img, .ntfs-img, .btrfs-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.fs-card:hover .ext4-img,
+.fs-card:hover .fat-img,
+.fs-card:hover .ntfs-img,
+.fs-card:hover .btrfs-img {
+  transform: scale(1.1);
+}
+
+/* Contenido con diseño mejorado */
 .fs-card-content {
-  padding: 25px;
+  padding: 25px 20px;
+  flex: 1;
+  border-top: none;
+  position: relative;
 }
 
 .fs-card-content p {
-  margin-bottom: 20px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.7;
-  color: #333;
+  color: var(--color-text);
+  margin-bottom: 25px;
 }
 
+/* Lista de características con iconos personalizados */
 .fs-features {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-bottom: 15px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .fs-features li {
-  margin-bottom: 12px;
-  font-size: 0.95rem;
-  color: #444;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 14px;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  transition: transform 0.2s ease;
+}
+
+.fs-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: rgba(30, 69, 37, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.fs-features li::after {
+  content: '✓';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.fs-card:hover .fs-features li:hover {
+  transform: translateX(5px);
+}
+
+.fs-card:hover .fs-features li:hover::before {
+  background-color: rgba(30, 69, 37, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Responsive para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+  .fs-card {
+    margin-top: 45px;
+  }
+  
+  .fs-card-header {
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    min-width: 180px;
+    top: -25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fs-card-header {
+    width: 90%;
+    font-size: 1.2rem;
+    white-space: normal;
+    padding: 8px 15px;
+    top: -30px;
+  }
+  
+  .fs-card {
+    margin-top: 50px;
+  }
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .fs-card {
+    margin-top: 35px;
+  }
+  
+  .fs-card-header {
+    font-size: 1.3rem;
+    padding: 10px 20px;
+  }
+  
+  .fs-card-image {
+    height: 180px;
+  }
+  
+  .fs-card-content {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fs-card-header {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+}
+
+/* Mejoras para sección sistemas de archivos */
+.fs-intro {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  animation: fadeIn 0.8s ease-out forwards;
+  padding: 0 20px;
+}
+
+.fs-intro-list {
+  list-style-type: disc;
+  padding-left: 30px;
+  margin: 20px 0;
+}
+
+.fs-intro-list li {
+  margin-bottom: 10px;
+}
+
+/* Añadir imágenes a las tarjetas */
+.fs-card-image {
+  height: 180px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.fs-card:hover .fs-card-image {
+  transform: scale(1.05);
+}
+
+.ext4-img {
+  background-image: url('https://www.howtogeek.com/wp-content/uploads/2017/11/ext4_header.jpg');
+}
+
+.fat-img {
+  background-image: url('https://www.howtogeek.com/wp-content/uploads/2017/12/img_5a45265fd8ff8.jpg');
+}
+
+.ntfs-img {
+  background-image: url('https://www.howtogeek.com/wp-content/uploads/2021/05/ntfs_drive.jpg');
+}
+
+.btrfs-img {
+  background-image: url('https://www.howtogeek.com/wp-content/uploads/2021/05/btrfs-logo.jpg');
 }
 
 /* Estructura de directorios */
@@ -2897,7 +3102,7 @@ div[style="text-align: center;"] {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgb(175, 205, 178);
   border-radius: 2px;
 }
 
@@ -3011,7 +3216,7 @@ div[style="text-align: center;"] {
   color: white !important;
   font-weight: 600 !important;
   background-color: var(--color-primary) !important;
-  position: relative;
+  position: relative !important;
   box-shadow: 0 4px 8px rgba(30, 69, 37, 0.15) !important;
   border-bottom: none !important;
   padding: 7px 15px !important;

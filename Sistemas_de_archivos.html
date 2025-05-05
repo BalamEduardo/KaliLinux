@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -43,75 +42,72 @@
 
     <!-- Contenido principal -->
     <div class="filesystem-container">
+        <!-- Introducción -->
+        <div class="fs-intro">
+            <p>Un sistema de archivos es el sistema de almacenamiento de un dispositivo de memoria, que estructura y organiza la escritura, búsqueda, lectura, almacenamiento, edición y eliminación de archivos de una manera concreta. Los sistemas de archivos también otorgan a los archivos, entre otras, las siguientes características:</p>
+            <ul class="fs-intro-list">
+                <li>Convenciones para nombrar a los archivos</li>
+                <li>Atributos de archivo</li>
+                <li>Control(es) de acceso</li>
+            </ul>
+        </div>
+
         <!-- Tarjetas de sistemas de archivos -->
         <div class="fs-cards">
             <div class="fs-card">
                 <div class="fs-card-header">ext4</div>
+                <div class="fs-card-image ext4-img"></div>
                 <div class="fs-card-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                    <p>ext4 admite sistemas de archivos más grandes y maneja más archivos que ext3, lo que lo hace adecuado para las necesidades de almacenamiento modernas.</p>
                     <ul class="fs-features">
-                        <li>Soporte para volúmenes hasta 1 EiB</li>
-                        <li>Journaling completo para integridad del sistema</li>
-                        <li>Reducción de fragmentación del disco</li>
+                        <li>Es el sistema de archivos predeterminado en Kali Linux.</li>
+                        <li>Es robusto, rápido y confiable.</li>
+                        <li>Soporta archivos grandes y volúmenes grandes.</li>
+                        <li>Buen manejo de fallos.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="fs-card">
+                <div class="fs-card-header">FAT32 / exFAT</div>
+                <div class="fs-card-image fat-img"></div>
+                <div class="fs-card-content">
+                    <p>Establecido en 1996, FAT32 es uno de los viejos rockeros del mundo de los sistemas de archivo, robusto pero anticuado. Su mayor limitación es que sólo permite guardar archivos de hasta 4 GB. exFAT fue introducido por Microsoft como una actualización para superar esta limitación.</p>
+                    <ul class="fs-features">
+                        <li>Usados mayormente para compatibilidad con otros sistemas operativos (Windows, macOS).</li>
+                        <li>Útiles para unidades USB o discos externos.</li>
+                        <li>exFAT permite archivos de más de 4GB, a diferencia de FAT32.</li>
                     </ul>
                 </div>
             </div>
             
             <div class="fs-card">
                 <div class="fs-card-header">NTFS</div>
+                <div class="fs-card-image ntfs-img"></div>
                 <div class="fs-card-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+                    <p>Se trata de otra alternativa al sistema FAT32 promovida por Microsoft, además es el sistema de archivos que Windows utiliza por defecto. Sin los límites del tamaño máximo de archivo del FAT32, el NTFS se convierte en una muy buena opción para discos duros y otras unidades externas.</p>
                     <ul class="fs-features">
-                        <li>Compatibilidad con Windows para operaciones forenses</li>
-                        <li>Soporte para permisos y cifrado</li>
-                        <li>Tamaños de archivo extensos</li>
+                        <li>Sistema de archivos nativo de Windows.</li>
+                        <li>Kali puede leer y escribir en NTFS gracias al soporte de ntfs-3g.</li>
+                        <li>También útil para compartir datos entre sistemas.</li>
                     </ul>
                 </div>
             </div>
             
             <div class="fs-card">
-                <div class="fs-card-header">btrfs</div>
+                <div class="fs-card-header">Btrfs</div>
+                <div class="fs-card-image btrfs-img"></div>
                 <div class="fs-card-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultricies est. Mauris iaculis eget dolor nec hendrerit.</p>
+                    <p>Fue diseñado con el objetivo de implementar características avanzadas, al mismo tiempo que se enfoca en la tolerancia a fallos, la reparación y la facilidad de administración.</p>
                     <ul class="fs-features">
-                        <li>Sistema de archivos de próxima generación</li>
-                        <li>Soporte para instantáneas y clonación</li>
-                        <li>Alta resistencia a la corrupción de datos</li>
+                        <li>Más moderno, con características avanzadas como snapshots, compresión, y verificación de datos.</li>
+                        <li>No es el predeterminado en Kali, pero está disponible.</li>
+                        <li>Ofrece mejor protección contra la corrupción de datos.</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Diagrama de estructura -->
-        <div class="fs-structure">
-            <h2>Estructura de directorios</h2>
-            <div class="fs-diagram">
-                <div class="fs-root">/root</div>
-                <div class="fs-branches">
-                    <div class="fs-branch">
-                        <div class="fs-folder">/bin</div>
-                        <div class="fs-description">Comandos esenciales</div>
-                    </div>
-                    <div class="fs-branch">
-                        <div class="fs-folder">/etc</div>
-                        <div class="fs-description">Configuración del sistema</div>
-                    </div>
-                    <div class="fs-branch">
-                        <div class="fs-folder">/usr</div>
-                        <div class="fs-description">Aplicaciones y herramientas</div>
-                    </div>
-                    <div class="fs-branch">
-                        <div class="fs-folder">/var</div>
-                        <div class="fs-description">Datos variables</div>
-                    </div>
-                    <div class="fs-branch">
-                        <div class="fs-folder">/opt</div>
-                        <div class="fs-description">Software adicional</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
         <!-- Tabla de características -->
         <div class="fs-comparison">
             <h2>Comparativa de rendimiento</h2>
@@ -135,18 +131,11 @@
                             <td><div class="rating r-5"></div></td>
                         </tr>
                         <tr>
-                            <td>btrfs</td>
+                            <td>Btrfs</td>
                             <td><div class="rating r-3"></div></td>
                             <td><div class="rating r-3"></div></td>
                             <td><div class="rating r-5"></div></td>
                             <td><div class="rating r-4"></div></td>
-                        </tr>
-                        <tr>
-                            <td>XFS</td>
-                            <td><div class="rating r-5"></div></td>
-                            <td><div class="rating r-4"></div></td>
-                            <td><div class="rating r-3"></div></td>
-                            <td><div class="rating r-3"></div></td>
                         </tr>
                         <tr>
                             <td>NTFS</td>
@@ -155,33 +144,16 @@
                             <td><div class="rating r-4"></div></td>
                             <td><div class="rating r-3"></div></td>
                         </tr>
+                        <tr>
+                            <td>FAT32/exFAT</td>
+                            <td><div class="rating r-4"></div></td>
+                            <td><div class="rating r-3"></div></td>
+                            <td><div class="rating r-2"></div></td>
+                            <td><div class="rating r-2"></div></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
-        </div>
-
-        <!-- Bloque de características especiales -->
-        <div class="fs-special-features">
-            <div class="fs-feature-block">
-                <div class="fs-icon">🔐</div>
-                <h3>Cifrado de disco</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-            </div>
-            <div class="fs-feature-block">
-                <div class="fs-icon">🔄</div>
-                <h3>Journaling</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-            </div>
-            <div class="fs-feature-block">
-                <div class="fs-icon">⚡</div>
-                <h3>Optimización</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-            </div>
-        </div>
-        
-        <!-- Conclusión -->
-        <div class="fs-conclusion">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
         </div>
     </div>
 
