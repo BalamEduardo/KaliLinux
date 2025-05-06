@@ -826,7 +826,7 @@ div[style="text-align: center;"] {
 
 .contenido-antecedentes p:nth-child(2) { animation-delay: 0.2s; }
 .contenido-antecedentes p:nth-child(3) { animation-delay: 0.4s; }
-.contenido-antecedentes p:nth-child(4) { animation-delay: 0.6s; }
+.contenido-antecentes p:nth-child(4) { animation-delay: 0.6s; }
 
 .contenido-antecedentes p strong {
   font-weight: 700;
@@ -3293,4 +3293,141 @@ a.menu-item[href="Interfaces.html"]::after,
 a.menu-item[href="Interfaces.html"].activo::after {
   display: none !important;
   content: none !important;
+}
+
+/* ===========================================
+   NUEVO DISEÑO DE APLICACIONES EN LA INDUSTRIA
+   =========================================== */
+.aplicaciones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 50px 0;
+}
+
+.aplicacion-card {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.aplicacion-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.aplicacion-image {
+  flex: 1;
+  min-width: 300px;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.aplicacion-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(30, 69, 37, 0.118) 0%, rgba(30, 69, 37, 0.233) 100%);
+  transition: all 0.3s ease;
+}
+
+.aplicacion-card:hover .aplicacion-overlay {
+  background: linear-gradient(135deg, rgba(30, 69, 37, 0.7) 0%, rgba(30, 69, 37, 0.3) 100%);
+}
+
+.aplicacion-number {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.aplicacion-card:hover .aplicacion-number {
+  transform: translateY(-5px);
+  opacity: 1;
+}
+
+.aplicacion-content {
+  flex: 1.5;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aplicacion-content h2 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.aplicacion-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), transparent);
+  transition: width 0.3s ease;
+}
+
+.aplicacion-card:hover .aplicacion-content h2::after {
+  width: 100px;
+}
+
+.aplicacion-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 900px) {
+  .aplicacion-card {
+    flex-direction: column;
+  }
+  
+  .aplicacion-image {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .aplicacion-number {
+    top: 20px;
+    bottom: auto;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .aplicacion-image {
+    height: 150px;
+  }
+  
+  .aplicacion-content {
+    padding: 25px;
+  }
+  
+  .aplicacion-content h2 {
+    font-size: 1.5rem;
+  }
 }

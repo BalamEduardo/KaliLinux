@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación vía Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+4:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilo_Instalaciones.css">
+    <style>
+        /* Estilos inline para garantizar que funcione */
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .carousel-slide {
+            display: none;
+        }
+        
+        .carousel-slide.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+          <div class="header-top">
+            <a href="index.html" class="logo">KaliLinux</a>
+          </div>
+          <div class="menu-container">
+            <nav class="menu">
+              <a class="menu-item" href="Antecedentes.html">Antecedentes</a>
+              <a class="menu-item" href="Características.html">Características</a>
+              <a class="menu-item" href="Gestor_de_arranque.html">Gestor de arranque</a>
+              <a class="menu-item" href="Sistemas_de_archivos.html">Sistemas de archivos</a>
+              <a class="menu-item" href="Aplicaciones_en_la_industria.html">Aplicaciones en la industria</a>
+              <a class="menu-item" href="Versiones.html">Versiones</a>
+              <a class="menu-item" href="Interfaces.html">Interfaces</a>
+              <a class="menu-item activo" href="Aplicacion_viaWeb.html">Aplicación vía Web</a>
+            </nav>
+          </div>
+        </div>
+    </header>
+
+    <!-- Banner de la sección -->
+    <section class="gallery-banner">
+        <div class="gallery-banner-content">
+            <h1>Aplicación vía Web</h1>
+            <p>Explora paso a paso los procesos de instalación y configuración de Kali Linux y sus aplicaciones</p>
+        </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <div class="gallery-container">
+        <!-- Sistema de pestañas simplificado -->
+        <div class="tabs-container">
+            <!-- Botones de pestañas -->
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="openTab('tab-kali')">Instalación de Kali Linux</button>
+                <button class="tab-button" onclick="openTab('tab-dns')">DNS y Server</button>
+                <button class="tab-button" onclick="openTab('tab-moodle')">Moodle</button>
+            </div>
+            
+            <!-- Contenido de pestañas -->
+            
+            <!-- Pestaña 1: Instalación de Kali Linux -->
+            <div id="tab-kali" class="tab-content active">
+                <h2>Proceso de Instalación de Kali Linux</h2>
+                <p>Paso a paso del proceso de instalación del sistema operativo Kali Linux.</p>
+                
+                <!-- Carrusel simple para Kali Linux -->
+                <div class="simple-carousel">
+                    <!-- Diapositivas -->
+                    <div class="carousel-slides">
+                        <div class="carousel-slide active">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 175153.png" alt="Inicio del instalador">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 175231.png" alt="Selección de idioma">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 181553.png" alt="Configuración de red">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 181753.png" alt="Configuración de usuario">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 182213.png" alt="Particionado de disco">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 182339.png" alt="Instalación del sistema">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 182403.png" alt="Configuración de paquetes">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 182618.png" alt="Configuración de GRUB">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 183543.png" alt="Configuración de GRUB">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 183601.png" alt="Configuración de GRUB">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 183748.png" alt="Configuración de GRUB">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgINSTALACION/Screenshot 2025-05-04 184518.png" alt="Instalación completada">
+                        </div>
+                    </div>
+                    
+                    <!-- Navegación -->
+                    <div class="carousel-nav">
+                        <button class="carousel-btn prev-btn" onclick="prevSlide('kali')">Anterior</button>
+                        <button class="carousel-btn next-btn" onclick="nextSlide('kali')">Siguiente</button>
+                    </div>
+                    <div class="slide-counter">
+                        <span id="kali-current">1</span> / <span id="kali-total">12</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pestaña 2: DNS y Server -->
+            <div id="tab-dns" class="tab-content">
+                <h2>Configuración de DNS y Servidor</h2>
+                <p>Guía visual para la instalación y configuración de servicios DNS y servidor web en Kali Linux.</p>
+                
+                <!-- Carrusel simple para DNS -->
+                <div class="simple-carousel">
+                    <!-- Diapositivas -->
+                    <div class="carousel-slides">
+                        <div class="carousel-slide active">
+                            <img src="ImgDNSySERVER/Dns1.png" alt="Configuración DNS 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgDNSySERVER/Dns2.png" alt="Configuración DNS 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgDNSySERVER/Dns3.png" alt="Configuración DNS 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgDNSySERVER/Dns4.png" alt="Configuración DNS 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgDNSySERVER/Server1.png" alt="Configuración Server 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgDNSySERVER/Server2.png" alt="Configuración Server 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgDNSySERVER/Server3.png" alt="Configuración Server 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgDNSySERVER/Server4.png" alt="Configuración Server 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="ImgDNSySERVER/Server5.png" alt="Configuración Server 5">
+                        </div>
+                    </div>
+                    
+                    <!-- Navegación -->
+                    <div class="carousel-nav">
+                        <button class="carousel-btn prev-btn" onclick="prevSlide('dns')">Anterior</button>
+                        <button class="carousel-btn next-btn" onclick="nextSlide('dns')">Siguiente</button>
+                    </div>
+                    <div class="slide-counter">
+                        <span id="dns-current">1</span> / <span id="dns-total">9</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pestaña 3: Moodle -->
+            <div id="tab-moodle" class="tab-content">
+                <h2>Instalación de Moodle en Kali Linux</h2>
+                <p>Proceso completo de instalación y configuración de la plataforma educativa Moodle.</p>
+                
+                <!-- Carrusel simple para Moodle -->
+                <div class="simple-carousel">
+                    <!-- Diapositivas -->
+                    <div class="carousel-slides">
+                        <div class="carousel-slide active">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 201822.png" alt="Instalación Moodle 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 201832.png" alt="Instalación Moodle 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 201846.png" alt="Instalación Moodle 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 201856.png" alt="Instalación Moodle 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 201910.png" alt="Instalación Moodle 5">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 201936.png" alt="Instalación Moodle 6">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 201946.png" alt="Instalación Moodle 7">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202001.png" alt="Instalación Moodle 8">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202016.png" alt="Instalación Moodle 9">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202036.png" alt="Instalación Moodle 10">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202047.png" alt="Instalación Moodle 11">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202109.png" alt="Instalación Moodle 12">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202124.png" alt="Instalación Moodle 13">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202147.png" alt="Instalación Moodle 14">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202159.png" alt="Instalación Moodle 15">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202159.png" alt="Instalación Moodle 16">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202208.png" alt="Instalación Moodle 17">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202237.png" alt="Instalación Moodle 18">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/Screenshot 2025-05-05 202248.png" alt="Instalación Moodle 19">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imgMOODLE/WhatsApp Image 2025-05-04 at 9.36.32 PM.jpeg" alt="Instalación Moodle 20">
+                        </div>
+        
+                    </div>
+                    
+                    <!-- Navegación -->
+                    <div class="carousel-nav">
+                        <button class="carousel-btn prev-btn" onclick="prevSlide('moodle')">Anterior</button>
+                        <button class="carousel-btn next-btn" onclick="nextSlide('moodle')">Siguiente</button>
+                    </div>
+                    <div class="slide-counter">
+                        <span id="moodle-current">1</span> / <span id="moodle-total">20</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript simple -->
+    <script>
+        // Función para manejar pestañas
+        function openTab(tabId) {
+            // Ocultar todas las pestañas
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            // Desactivar todos los botones
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            // Mostrar la pestaña seleccionada
+            document.getElementById(tabId).classList.add("active");
+            
+            // Activar el botón correspondiente
+            var currentTabIndex = tabId === 'tab-kali' ? 0 : (tabId === 'tab-dns' ? 1 : 2);
+            tabButtons[currentTabIndex].classList.add("active");
+        }
+        
+        // Variables para seguimiento de slides
+        var currentSlides = {
+            'kali': 0,
+            'dns': 0,
+            'moodle': 0
+        };
+        
+        var totalSlides = {
+            'kali': 12,
+            'dns': 9,
+            'moodle': 20
+        };
+        
+        // Configurar contadores iniciales
+        document.getElementById('kali-total').textContent = totalSlides['kali'];
+        document.getElementById('dns-total').textContent = totalSlides['dns'];
+        document.getElementById('moodle-total').textContent = totalSlides['moodle'];
+        
+        // Función para ir a la siguiente diapositiva
+        function nextSlide(carouselId) {
+            var slides = document.querySelector('#tab-' + carouselId + ' .carousel-slides').children;
+            slides[currentSlides[carouselId]].classList.remove('active');
+            
+            currentSlides[carouselId] = (currentSlides[carouselId] + 1) % totalSlides[carouselId];
+            
+            slides[currentSlides[carouselId]].classList.add('active');
+            document.getElementById(carouselId + '-current').textContent = currentSlides[carouselId] + 1;
+        }
+        
+        // Función para ir a la diapositiva anterior
+        function prevSlide(carouselId) {
+            var slides = document.querySelector('#tab-' + carouselId + ' .carousel-slides').children;
+            slides[currentSlides[carouselId]].classList.remove('active');
+            
+            currentSlides[carouselId] = (currentSlides[carouselId] - 1 + totalSlides[carouselId]) % totalSlides[carouselId];
+            
+            slides[currentSlides[carouselId]].classList.add('active');
+            document.getElementById(carouselId + '-current').textContent = currentSlides[carouselId] + 1;
+        }
+        
+        // Inicializar carruseles
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar listeners de teclado para navegar con flechas
+            document.addEventListener('keydown', function(e) {
+                // Identificar la pestaña activa
+                var activeTab = document.querySelector('.tab-content.active');
+                if (!activeTab) return;
+                
+                var tabId = activeTab.id.replace('tab-', '');
+                
+                // Navegar con flechas izquierda/derecha
+                if (e.key === 'ArrowLeft') {
+                    prevSlide(tabId);
+                } else if (e.key === 'ArrowRight') {
+                    nextSlide(tabId);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
