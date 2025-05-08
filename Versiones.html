@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Versiones</title>
+    <title>Versiones de Kali Linux</title>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+4:wght@400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -48,108 +47,151 @@
         <p>Kali Linux ha evolucionado significativamente desde su lanzamiento inicial en 2013, pasando de ser el sucesor de BackTrack a convertirse en el estándar de facto para pruebas de penetración y auditorías de seguridad. Esta línea temporal muestra los hitos más importantes en su desarrollo, destacando las innovaciones introducidas en cada versión.</p>
     </div>
 
-    <!-- Línea del tiempo -->
-    <main class="timeline">
-        <div class="timeline-item izquierda">
-            <div class="timeline-content">
-                <h3 class="timeline-title">Kali Linux 1.0</h3>
-                <ul>
-                    <li>Primera versión oficial, reemplazo completo de BackTrack</li>
-                    <li>Basado en Debian Wheezy, con más de 300 herramientas</li>
-                    <li>Soporte para múltiples arquitecturas incluyendo ARM</li>
-                </ul>
-                <div class="timeline-label">Primera versión estable</div>
+    <!-- Línea del tiempo - NUEVO DISEÑO -->
+    <div class="timeline-container">
+        <!-- Kali Linux 1.0 -->
+        <div class="timeline-version left">
+            <div class="timeline-version-header">
+                <div>
+                    <span class="timeline-version-icon">🚀</span>
+                    <h3 class="timeline-version-title">Kali Linux 1.0</h3>
+                </div>
+                <span class="timeline-version-date">13 de marzo de 2013</span>
             </div>
-            <div class="timeline-icon">🚀</div>
-            <div class="timeline-date">2013</div>
-        </div>
-
-        <div class="timeline-item derecha">
-            <div class="timeline-date">2014</div>
-            <div class="timeline-icon">🔄</div>
-            <div class="timeline-content">
-                <h3 class="timeline-title">Kali Linux 1.1</h3>
+            <div class="timeline-version-content">
+                <p class="timeline-version-description">Primera versión oficial de Kali Linux, sucesora de BackTrack, desarrollada por Offensive Security.</p>
+                <h4>Características destacadas:</h4>
                 <ul>
-                    <li>Soporte mejorado para dispositivos inalámbricos</li>
-                    <li>Núcleo Linux actualizado (3.18)</li>
-                    <li>Mejoras en Metasploit y otras herramientas clave</li>
+                    <li>Basada en Debian.</li>
+                    <li>Incluye más de 300 herramientas de pruebas de penetración.</li>
+                    <li>Soporte para múltiples arquitecturas.</li>
                 </ul>
-                <div class="timeline-label">Mejoras de rendimiento</div>
             </div>
         </div>
 
-        <div class="timeline-item izquierda">
-            <div class="timeline-content">
-                <h3 class="timeline-title">Kali Linux 2.0</h3>
-                <ul>
-                    <li>Cambio de base a Debian Jessie</li>
-                    <li>Incorporación del modo no-root por defecto</li>
-                    <li>Soporte multi-entorno de escritorio (GNOME, KDE, XFCE)</li>
-                </ul>
-                <div class="timeline-label">Cambio a base Debian</div>
+        <!-- Kali Linux 2.0 -->
+        <div class="timeline-version right">
+            <div class="timeline-version-header">
+                <div>
+                    <span class="timeline-version-icon">🐉</span>
+                    <h3 class="timeline-version-title">Kali Linux 2.0 (Sana)</h3>
+                </div>
+                <span class="timeline-version-date">11 de agosto de 2015</span>
             </div>
-            <div class="timeline-icon">⚙️</div>
-            <div class="timeline-date">2015</div>
-        </div>
-
-        <div class="timeline-item derecha">
-            <div class="timeline-date">2016</div>
-            <div class="timeline-icon">🔍</div>
-            <div class="timeline-content">
-                <h3 class="timeline-title">Kali Linux Rolling</h3>
+            <div class="timeline-version-content">
+                <p class="timeline-version-description">Conocida como "Kali Sana", esta versión introdujo una interfaz de usuario mejorada y una experiencia de usuario más amigable.</p>
+                <h4>Características destacadas:</h4>
                 <ul>
-                    <li>Adopción del modelo de actualización continua</li>
-                    <li>Basado en Debian Testing</li>
-                    <li>Actualizaciones constantes sin necesidad de reinstalar</li>
+                    <li>Actualizaciones más frecuentes de paquetes.</li>
+                    <li>Mejoras en la interfaz gráfica.</li>
+                    <li>Mayor estabilidad y rendimiento.</li>
                 </ul>
-                <div class="timeline-label">Modelo de actualización continua</div>
             </div>
         </div>
 
-        <div class="timeline-item izquierda">
-            <div class="timeline-content">
-                <h3 class="timeline-title">Kali Linux 2019</h3>
-                <ul>
-                    <li>Nuevo tema visual "Kali Undercover Mode"</li>
-                    <li>Herramientas organizadas en metapaquetes</li>
-                    <li>Interfaz XFCE como predeterminada</li>
-                </ul>
-                <div class="timeline-label">Nueva interfaz gráfica</div>
+        <!-- Kali Linux Rolling Release -->
+        <div class="timeline-version left">
+            <div class="timeline-version-header">
+                <div>
+                    <span class="timeline-version-icon">🔄</span>
+                    <h3 class="timeline-version-title">Kali Linux Rolling Release</h3>
+                </div>
+                <span class="timeline-version-date">21 de enero de 2016</span>
             </div>
-            <div class="timeline-icon">🖥️</div>
-            <div class="timeline-date">2019</div>
-        </div>
-
-        <div class="timeline-item derecha">
-            <div class="timeline-date">2020</div>
-            <div class="timeline-icon">🔒</div>
-            <div class="timeline-content">
-                <h3 class="timeline-title">Kali 2020</h3>
+            <div class="timeline-version-content">
+                <p class="timeline-version-description">Transición a un modelo de lanzamiento continuo, permitiendo a los usuarios recibir actualizaciones constantes sin necesidad de reinstalar.</p>
+                <h4>Características destacadas:</h4>
                 <ul>
-                    <li>Credenciales predeterminadas cambiadas (kali/kali)</li>
-                    <li>Modo de usuario único eliminado</li>
-                    <li>Shell ZSH por defecto con nuevas personalizaciones</li>
+                    <li>Actualizaciones continuas de herramientas y paquetes.</li>
+                    <li>Mejor soporte para hardware moderno.</li>
+                    <li>Mayor flexibilidad para los usuarios.</li>
                 </ul>
-                <div class="timeline-label">Cambios en autenticación</div>
             </div>
         </div>
 
-        <div class="timeline-item izquierda">
-            <div class="timeline-content">
-                <h3 class="timeline-title">Kali Linux 2023</h3>
-                <ul>
-                    <li>Kernel 6.x con mejor soporte para hardware reciente</li>
-                    <li>Más de 600 herramientas de seguridad</li>
-                    <li>Mejoras en el instalador y en la gestión de paquetes</li>
-                </ul>
-                <div class="timeline-label">Versión actual</div>
+        <!-- Kali Linux 2019.4 -->
+        <div class="timeline-version right">
+            <div class="timeline-version-header">
+                <div>
+                    <span class="timeline-version-icon">🎨</span>
+                    <h3 class="timeline-version-title">Kali Linux 2019.4</h3>
+                </div>
+                <span class="timeline-version-date">26 de noviembre de 2019</span>
             </div>
-            <div class="timeline-icon">🌟</div>
-            <div class="timeline-date">2023</div>
+            <div class="timeline-version-content">
+                <p class="timeline-version-description">Introducción de un nuevo entorno de escritorio por defecto y mejoras visuales significativas.</p>
+                <h4>Características destacadas:</h4>
+                <ul>
+                    <li>Cambio de GNOME a Xfce como entorno de escritorio predeterminado.</li>
+                    <li>Nuevo tema visual y mejoras en la interfaz de usuario.</li>
+                    <li>Introducción del modo "Kali Undercover" para simular la apariencia de Windows.</li>
+                </ul>
+            </div>
         </div>
-    </main>
+
+        <!-- Kali Linux 2020.3 -->
+        <div class="timeline-version left">
+            <div class="timeline-version-header">
+                <div>
+                    <span class="timeline-version-icon">🐚</span>
+                    <h3 class="timeline-version-title">Kali Linux 2020.3</h3>
+                </div>
+                <span class="timeline-version-date">18 de agosto de 2020</span>
+            </div>
+            <div class="timeline-version-content">
+                <p class="timeline-version-description">Enfoque en la mejora de la experiencia del usuario y la personalización del sistema.</p>
+                <h4>Características destacadas:</h4>
+                <ul>
+                    <li>Cambio del shell predeterminado de Bash a Zsh.</li>
+                    <li>Mejoras en el soporte para WSL 2 (Windows Subsystem for Linux).</li>
+                    <li>Actualizaciones de herramientas y correcciones de errores.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Kali Linux 2022.1 -->
+        <div class="timeline-version right">
+            <div class="timeline-version-header">
+                <div>
+                    <span class="timeline-version-icon">📦</span>
+                    <h3 class="timeline-version-title">Kali Linux 2022.1</h3>
+                </div>
+                <span class="timeline-version-date">14 de febrero de 2022</span>
+            </div>
+            <div class="timeline-version-content">
+                <p class="timeline-version-description">Introducción de nuevas herramientas y mejoras en la compatibilidad con hardware.</p>
+                <h4>Características destacadas:</h4>
+                <ul>
+                    <li>Incorporación de nuevas herramientas de seguridad.</li>
+                    <li>Mejoras en el soporte para dispositivos ARM.</li>
+                    <li>Actualizaciones en el instalador y en la documentación oficial.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Kali Linux 2025.1a -->
+        <div class="timeline-version left">
+            <div class="timeline-version-header">
+                <div>
+                    <span class="timeline-version-icon">🆕</span>
+                    <h3 class="timeline-version-title">Kali Linux 2025.1a</h3>
+                </div>
+                <span class="timeline-version-date">19 de marzo de 2025</span>
+            </div>
+            <div class="timeline-version-content">
+                <p class="timeline-version-description">Primera versión de 2025, enfocada en mejoras visuales y actualizaciones de herramientas.</p>
+                <h4>Características destacadas:</h4>
+                <ul>
+                    <li>Introducción de la herramienta "Hoaxshell" para generar payloads de reverse shell en Windows.</li>
+                    <li>Actualización del kernel a la versión 6.12.</li>
+                    <li>Renovación del tema visual, incluyendo nuevos fondos de pantalla y mejoras en la interfaz.</li>
+                    <li>Actualizaciones en los entornos de escritorio Xfce 4.20 y KDE Plasma 6.2.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
-    <!-- Comparativa de versiones -->
+    <!-- Comparativa de versiones - SE MANTIENE IGUAL -->
     <section class="versiones-comparativa">
         <h2>Comparativa de principales versiones</h2>
         
@@ -160,8 +202,8 @@
                         <th>Característica</th>
                         <th>Kali 1.0 (2013)</th>
                         <th>Kali 2.0 (2015)</th>
-                        <th>Kali Rolling</th>
-                        <th>Kali 2023</th>
+                        <th>Kali Rolling (2016)</th>
+                        <th>Kali 2025.1a</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -170,14 +212,14 @@
                         <td>Debian Wheezy</td>
                         <td>Debian Jessie</td>
                         <td>Debian Testing</td>
-                        <td>Debian Bullseye</td>
+                        <td>Debian Bookworm</td>
                     </tr>
                     <tr>
                         <td>Kernel</td>
                         <td>3.x</td>
                         <td>4.x</td>
                         <td>5.x</td>
-                        <td>6.x</td>
+                        <td>6.12</td>
                     </tr>
                     <tr>
                         <td>Herramientas</td>
@@ -190,35 +232,35 @@
                         <td>Entorno de escritorio</td>
                         <td>GNOME 3</td>
                         <td>GNOME 3</td>
-                        <td>XFCE/GNOME</td>
-                        <td>Múltiples opciones</td>
+                        <td>XFCE, GNOME, KDE</td>
+                        <td>XFCE 4.20, KDE Plasma 6.2</td>
                     </tr>
                     <tr>
                         <td>Usuario por defecto</td>
                         <td>root</td>
                         <td>root (modo no-root añadido)</td>
-                        <td>root/no-root</td>
-                        <td>kali (no-root)</td>
+                        <td>root o usuario normal</td>
+                        <td>kali (no-root por defecto)</td>
                     </tr>
                     <tr>
                         <td>Instalador</td>
                         <td>Básico</td>
                         <td>Mejorado</td>
-                        <td>Gráfico avanzado</td>
-                        <td>Calamares/Debian</td>
+                        <td>Instalador gráfico avanzado</td>
+                        <td>Calamares + Debian Installer</td>
                     </tr>
                     <tr>
                         <td>Modo persistente</td>
                         <td>Limitado</td>
                         <td>Mejorado</td>
                         <td>Completo</td>
-                        <td>Avanzado (kali-tweaks)</td>
+                        <td>Avanzado (con kali-tweaks)</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
-    
+
     <!-- La evolución visual -->
     <section class="versiones-visual">
         <h2>Evolución visual a través del tiempo</h2>
@@ -233,19 +275,36 @@
             </div>
             <div class="version-img-container">
                 <div class="version-img version-3"></div>
-                <div class="version-caption">2019 - XFCE</div>
+                <div class="version-caption">2016 - Kali Rolling</div>
             </div>
             <div class="version-img-container">
                 <div class="version-img version-4"></div>
-                <div class="version-caption">2023 - Actual</div>
+                <div class="version-caption">2025 - Kali 2025.1a</div>
             </div>
         </div>
     </section>
 
-    <div style="text-align: center; margin-top: 40px;">
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 60px;">
         <button class="btn"><a href="Interfaces.html" class="continuar">Siguiente</a></button>
     </div>
 
+    <script>
+        // Animación para revelar elementos cuando entran en el viewport
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.timeline-version').forEach(item => {
+                item.style.animationPlayState = 'paused';
+                observer.observe(item);
+            });
+        });
+    </script>
 </body>
 
 </html>

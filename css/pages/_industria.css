@@ -1,0 +1,276 @@
+/* ===========================================
+   APLICACIONES EN LA INDUSTRIA
+   =========================================== */
+.industria-banner {
+  background: linear-gradient(135deg, #0e2b13, #1E4525, #0e2b13);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.industria-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 90% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.industria-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.industria-banner h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  animation: slideUp 0.8s ease-out forwards;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.industria-banner p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.industria-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.industria-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Grid de tarjetas */
+.industria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 40px 0 70px;
+}
+
+.industria-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.industria-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.industria-icon {
+  background: linear-gradient(135deg, #1E4525, #183a1e);
+  padding: 30px 0;
+  text-align: center;
+}
+
+.industria-icon img {
+  width: 80px;
+  height: 80px;
+  filter: brightness(0) invert(1);
+}
+
+.industria-card h3 {
+  font-family: 'DM Serif Display', serif;
+  color: #1E4525;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.industria-content {
+  padding: 25px;
+}
+
+.industria-content p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.industria-features {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.industria-features li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+
+/* Cita destacada */
+.industria-quote {
+  max-width: 900px;
+  margin: 70px auto;
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  position: relative;
+}
+
+.industria-quote::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 30px;
+  font-size: 120px;
+  font-family: 'DM Serif Display', serif;
+  color: rgba(30, 69, 37, 0.1);
+  line-height: 1;
+}
+
+.industria-quote p {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.industria-quote cite {
+  font-size: 1rem;
+  color: #1E4525;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* NUEVO DISEÑO DE APLICACIONES EN LA INDUSTRIA */
+.aplicaciones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 50px 0;
+}
+
+.aplicacion-card {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.aplicacion-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.aplicacion-image {
+  flex: 1;
+  min-width: 300px;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.aplicacion-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(30, 69, 37, 0.118) 0%, rgba(30, 69, 37, 0.233) 100%);
+  transition: all 0.3s ease;
+}
+
+.aplicacion-card:hover .aplicacion-overlay {
+  background: linear-gradient(135deg, rgba(30, 69, 37, 0.7) 0%, rgba(30, 69, 37, 0.3) 100%);
+}
+
+.aplicacion-number {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.aplicacion-card:hover .aplicacion-number {
+  transform: translateY(-5px);
+  opacity: 1;
+}
+
+.aplicacion-content {
+  flex: 1.5;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aplicacion-content h2 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.aplicacion-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), transparent);
+  transition: width 0.3s ease;
+}
+
+.aplicacion-card:hover .aplicacion-content h2::after {
+  width: 100px;
+}
+
+.aplicacion-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}

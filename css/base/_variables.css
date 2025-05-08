@@ -1,0 +1,32 @@
+/* ===========================================
+   VARIABLES CSS
+   =========================================== */
+:root {
+  /* Colores principales */
+  --color-primary: #1E4525;
+  --color-primary-dark: #183a1e;
+  --color-bg: #F6F4EF;
+  --color-text: #333;
+  --color-text-light: #555;
+  
+  /* Tipografías */
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Source Serif 4', serif;
+  
+  /* Sombras */
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.1);
+  
+  /* Espaciado */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 40px;
+  --spacing-xl: 60px;
+  
+  /* Bordes */
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 15px;
+}

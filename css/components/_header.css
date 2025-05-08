@@ -1,0 +1,217 @@
+/* ===========================================
+   3. HEADER Y NAVEGACIÓN
+   =========================================== */
+
+/* Reset completo de estilos para el header */
+header,
+header::before,
+header::after,
+.header-container,
+.header-top,
+.header-top::before,
+.header-top::after,
+.menu-container,
+.menu,
+.menu-item,
+.menu-item::before,
+.menu-item::after,
+.menu-item.activo,
+.menu-item.activo::before,
+.menu-item.activo::after {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  position: relative;
+  content: none;
+  display: block;
+  transform: none;
+  opacity: 1;
+}
+
+/* Nuevo estilo de header limpio */
+header {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  animation: slideInDown 0.5s ease-out;
+}
+
+/* Contenedor principal */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Zona superior con logo */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(30, 69, 37, 0.05);
+  position: relative;
+}
+
+/* Línea decorativa superior */
+.header-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  opacity: 0.7;
+}
+
+/* Logo estilizado */
+.logo {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0 15px;
+  display: inline-block;
+}
+
+/* Puntos decorativos del logo */
+.logo::before, .logo::after {
+  content: "•";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: var(--color-primary);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.logo::before {
+  left: -8px;
+}
+
+.logo::after {
+  right: -8px;
+}
+
+/* Efectos hover del logo */
+.logo:hover {
+  color: var(--color-primary-dark);
+  transform: scale(1.02);
+}
+
+.logo:hover::before, .logo:hover::after {
+  opacity: 1;
+}
+
+/* Contenedor del menú */
+.menu-container {
+  background: transparent;
+  border-bottom: 1px solid rgba(30, 69, 37, 0.1);
+  padding: 0;
+}
+
+/* Menú principal */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 auto;
+  padding: 12px 0;
+  max-width: 1400px;
+}
+
+/* Elementos del menú */
+.menu-item {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 7px 15px;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  display: block;
+  border: none;
+}
+
+/* Efecto hover de elementos de menú */
+.menu-item:hover {
+  color: var(--color-primary);
+  background-color: rgba(30, 69, 37, 0.04);
+}
+
+/* Elemento activo del menú */
+.menu-item.activo {
+  color: white;
+  background-color: var(--color-primary);
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(30, 69, 37, 0.15);
+  border: none;
+}
+
+/* Eliminar explícitamente pseudoelementos para el elemento activo */
+.menu-item.activo::after,
+.menu-item.activo::before {
+  display: none;
+}
+
+/* Estilos para títulos de secciones */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 5px;
+  background: white;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* CORRECCIÓN DEL PROBLEMA EN LA PÁGINA DE INTERFACES */
+.menu-item.activo::after {
+  display: none !important;
+}
+
+.menu-item.activo {
+  color: white !important;
+  font-weight: 600 !important;
+  background-color: var(--color-primary) !important;
+  position: relative !important;
+  box-shadow: 0 4px 8px rgba(30, 69, 37, 0.15) !important;
+  border-bottom: none !important;
+  padding: 7px 15px !important;
+}
+
+.menu-item.activo::before,
+.menu-item.activo::after {
+  content: none !important;
+}
+

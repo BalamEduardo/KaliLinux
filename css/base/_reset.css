@@ -1,0 +1,28 @@
+/* ===========================================
+   1. RESET Y CONFIGURACIÓN BASE
+   =========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body, html {
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  position: relative;
+  color: var(--color-text);
+}
+

@@ -1,0 +1,383 @@
+/* ===========================================
+   PÁGINA DE VERSIONES
+   =========================================== */
+   .versiones-banner {
+    background: linear-gradient(135deg, #0e2b13, #1E4525, #0e2b13);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .versiones-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .versiones-banner h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: slideUp 0.8s ease-out forwards;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .versiones-banner p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.3s;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .versiones-intro {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .versiones-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  /* Línea del tiempo - NUEVO DISEÑO */
+  .timeline-container {
+    max-width: 1000px; /* Reducido de 1200px para hacer los cuadros más pequeños */
+    margin: 60px auto;
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    background: linear-gradient(to bottom, #0e2b13, #1E4525, #0e2b13);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -4px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(30, 69, 37, 0.5);
+  }
+  
+  .timeline-version {
+    position: relative;
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px 25px; /* Reducido el padding interno */
+    width: calc(50% - 30px); /* Ajustado para cuadros más pequeños */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra menos pronunciada */
+    margin-bottom: 50px; /* Reducido el margen entre elementos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+  }
+  
+  .timeline-version:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .timeline-version::after {
+    content: '';
+    position: absolute;
+    width: 20px; /* Reducido el tamaño del punto */
+    height: 20px; /* Reducido el tamaño del punto */
+    background-color: #1E4525;
+    border: 4px solid #fff; /* Reducido el borde */
+    border-radius: 50%;
+    top: 25px; /* Ajustado para centrarlo mejor */
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .timeline-version.left {
+    left: -0.8%;
+  }
+  
+  .timeline-version.right {
+    left: 53.8%;
+  }
+  
+  .timeline-version.left::after {
+    right: -52px; /* Ajustado para alinearlo con la línea central */
+  }
+  
+  .timeline-version.right::after {
+    left: -52px; /* Ajustado para alinearlo con la línea central */
+  }
+  
+  .timeline-version.left::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid white;
+    top: 27px; /* Ajustado para alinearse con el punto */
+    right: -15px;
+  }
+  
+  .timeline-version.right::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid white;
+    top: 27px; /* Ajustado para alinearse con el punto */
+    left: -15px;
+  }
+  
+  .timeline-version-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+  }
+  
+  .timeline-version-icon {
+    font-size: 2rem; /* Reducido ligeramente */
+    margin-right: 10px;
+  }
+  
+  .timeline-version-title {
+    margin: 0;
+    color: #1E4525;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem; /* Reducido ligeramente */
+  }
+  
+  .timeline-version-date {
+    background-color: #1E4525;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  
+  .timeline-version-content ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .timeline-version-content li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  
+  .timeline-version-description {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  
+  
+  /* Animaciones para la línea del tiempo */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes slideInLeft {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes slideInRight {
+    from { transform: translateX(100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  .timeline-version.left {
+    animation: slideInLeft 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .timeline-version.right {
+    animation: slideInRight 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  /* Retraso en la animación para cada elemento */
+  .timeline-version:nth-child(1) { animation-delay: 0.1s; }
+  .timeline-version:nth-child(2) { animation-delay: 0.3s; }
+  .timeline-version:nth-child(3) { animation-delay: 0.5s; }
+  .timeline-version:nth-child(4) { animation-delay: 0.7s; }
+  .timeline-version:nth-child(5) { animation-delay: 0.9s; }
+  .timeline-version:nth-child(6) { animation-delay: 1.1s; }
+  .timeline-version:nth-child(7) { animation-delay: 1.3s; }
+  
+  /* Estilos responsivos */
+  @media screen and (max-width: 768px) {
+    .timeline-container::after {
+      left: 30px;
+    }
+    
+    .timeline-version {
+      width: calc(100% - 80px); /* Ajustado para versión móvil */
+      padding: 15px 20px;
+      margin-left: 50px; /* Ajustado para versión móvil */
+    }
+    
+    .timeline-version.left,
+    .timeline-version.right {
+      left: 0;
+    }
+    
+    .timeline-version.left::after,
+    .timeline-version.right::after {
+      left: -36px; /* Ajustado para alinearse con la línea en móvil */
+    }
+    
+    .timeline-version.left::before,
+    .timeline-version.right::before {
+      left: -15px;
+      border-right: 15px solid white;
+      border-left: 0;
+    }
+    
+    .timeline-version-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .timeline-version-date {
+      margin-top: 10px;
+    }
+  }
+  
+  /* Tabla comparativa - YA EXISTENTE */
+  .versiones-comparativa {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+  }
+  
+  .versiones-comparativa h2 {
+    font-family: 'DM Serif Display', serif;
+    color: #1E4525;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .versiones-table-container {
+    overflow-x: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+  
+  .versiones-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  .versiones-tabla th,
+  .versiones-tabla td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+  
+  .versiones-tabla th {
+    background-color: #1E4525;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .versiones-tabla tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .versiones-tabla tr:hover td {
+    background-color: #f9f9f9;
+  }
+  
+  /* Galería visual */
+  .versiones-visual {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+  }
+  
+  .versiones-visual h2 {
+    font-family: 'DM Serif Display', serif;
+    color: #1E4525;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .versiones-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .version-img-container {
+    width: 420px;
+    text-align: center;
+  }
+  
+  .version-img {
+    height: 200px;
+    width: 100%;
+    background-size:contain;
+    
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+  
+  .version-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .version-img.version-1 {
+    background-image: url('https://lh3.googleusercontent.com/proxy/xmqasCDd6lMv-4EbubMs6SzT9yiRTg33NQkHS0RoSRJ5Q2nw7hfUpSjV2hKrujE3cZF-IWr4T-qXVwcz3OsAAK0NaCZVkJFkr_cErE8E2-rfqKgMHtL8CZ8q');
+  }
+  
+  .version-img.version-2 {
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKGm7oP0JUvP80R3g1hkOjYtMv_JSW637iFgyE3bj2JCQNxZLoewfd8Lncaz_QRMMjmnFx2DcNkAib-4kr2MykZFO1YVIglPayjbwL_v-tZemQfdRwypfwyUyX-eVrE1q3UOzizkh1Jpb8/s728-rw-e365/kali-linux-2-download.png');
+  }
+  
+  .version-img.version-3 {
+    background-image: url('https://fossbytes.com/wp-content/uploads/2016/01/kali-rolling-release.jpg');
+  }
+  
+  .version-img.version-4 {
+    background-image: url('https://i0.wp.com/9to5linux.com/wp-content/uploads/2025/03/kl251.webp?fit=1920%2C1080&ssl=1');
+  }
+  
+  .version-caption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #444;
+  }
