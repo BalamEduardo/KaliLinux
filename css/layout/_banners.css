@@ -78,7 +78,7 @@
   z-index: 2;
 }
 
-/* Títulos de sección mejorados */
+
 .contenido-antecedentes h1,
 .gestor-banner h1,
 .interfaces-banner h1,
@@ -94,7 +94,7 @@
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Añadir un acento gráfico a los títulos */
+
 .contenido-antecedentes h1::before,
 .gestor-banner h1::before,
 .interfaces-banner h1::before,

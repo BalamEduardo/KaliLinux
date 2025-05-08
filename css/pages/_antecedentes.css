@@ -2,7 +2,6 @@
    SECCIÓN DE ANTECEDENTES - REDISEÑO ELEGANTE
    =========================================== */
 
-/* Contenedor principal con efecto de profundidad */
 .contenido-antecedentes {
   position: relative;
   background: #f9f9f7;
@@ -15,7 +14,7 @@
   transform-style: preserve-3d;
 }
 
-/* Barra decorativa lateral */
+
 .contenido-antecedentes::before {
   content: '';
   position: absolute;
@@ -35,7 +34,6 @@
   z-index: 2;
 }
 
-/* Efecto de fondo elegante */
 .antecedentes-bg {
   position: absolute;
   top: 0;
@@ -47,7 +45,7 @@
   z-index: 1;
 }
 
-/* Título principal con acento tipográfico */
+
 .contenido-antecedentes h1 {
   position: relative;
   color: #1E4525;
@@ -76,7 +74,7 @@
   transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Párrafos con diseño elegante */
+
 .contenido-antecedentes p {
   position: relative;
   font-size: 1.15rem;

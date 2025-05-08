@@ -103,7 +103,6 @@ div[style="text-align: center;"] {
   padding-bottom: 10px;
 }
 
-/* Botones elegantes */
 .intro-button,
 .btn,
 .btn-next {
@@ -124,7 +123,6 @@ div[style="text-align: center;"] {
   border: none;
 }
 
-/* Efecto de gradiente al hacer hover */
 .intro-button::before,
 .btn::before,
 .btn-next::before {

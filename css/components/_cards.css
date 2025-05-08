@@ -1,7 +1,7 @@
 /* ===========================================
    COMPONENTES DE TARJETAS
    =========================================== */
-/* Tarjetas más elegantes */
+
 .caracteristica-card,
 .interfaz-card,
 .fs-card,
@@ -24,7 +24,7 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* Esquinas con iluminación sutil al hacer hover */
+
 .caracteristica-card::after,
 .interfaz-card::after,
 .fs-card::after,
@@ -169,7 +169,7 @@
   color: #444;
 }
 
-/* Tip card */
+
 .tip-card {
   flex: 1;
   min-width: 280px;
